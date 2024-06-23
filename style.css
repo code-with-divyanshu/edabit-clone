@@ -1,0 +1,58 @@
+.fs-7 {
+  font-size: 35px;
+}
+.al {
+  max-width: 150px;
+  max-height: 30px;
+}
+.text-li {
+  color: #2db84b;
+}
+.bg-li {
+  background-color: #dee5dd;
+}
+.bg-bl {
+  background-color: #cbf7f4;
+}
+.btn-li {
+  background-color: #2db84b;
+}
+.solid {
+  border-left: 3px solid #2db84b;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #2db84b;
+}
+
+body a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 468px) {
+  .sd {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ms-7 {
+    margin-left: 100px;
+  }
+  .ms-8 {
+    margin-left: 400px;
+  }
+  .me-6 {
+    margin-right: 120px;
+  }
+  .al {
+    margin-top: 5px;
+  }
+  .hj {
+    margin-top: 5px;
+  }
+  .ms-9 {
+    margin-left: 8px;
+  }
+}

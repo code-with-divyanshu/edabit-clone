@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Practice</title>
+    <link rel="icon" type="image/jpg" href="img/ap.jpg" />
+    <script src="jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg text-light"
+        style="background-color: rgb(45, 184, 75)"
+      >
+        <div class="container-fluid text-light">
+          <a class="navbar-brand text-light" href="#"
+            ><span class="fs-7 ms-7 fw-bold">edabit</span></a
+          >
+          <button
+            class="navbar-toggler ms-auto text-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNavDarkDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5 ms-9" href="#">Tutorials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5" href="#">Challenges</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5" href="#">Practice</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5" href="#">Shuffle</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-danger btn-sm mt-2 ms-9 px-3 text-light fw-bold"
+                  href="#"
+                  >GO PRO</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="nav nav-item dropdown d-inline">
+            <ul class="nav flex-row ms-auto me-6 mt-2 hj">
+              <li class="nav-item fs-5 hj">70<span> XP</span></li>
+              <li class="nav input">
+                <input
+                  type="search"
+                  name="search"
+                  class="form-control rounded-4 ms-3 al"
+                  placeholder="Search"
+                />
+              </li>
+              <li class="nav-item dropdown">
+                <button
+                  class="btn"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-bell text-light"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-light pb-4">
+                  <li><a class="dropdown-item" href="#">Notification</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item fs-6 fw-light border top py-3"
+                      href="#"
+                      >You don't have any notification</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button
+                  class="btn"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-plus text-light"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-light">
+                  <li><a class="dropdown-item" href="#">New Challenge</a></li>
+                  <li><a class="dropdown-item" href="#">New Translation</a></li>
+                  <li><a class="dropdown-item" href="#">New Collection</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown d-inline">
+                <a
+                  class="nav-link dropdown-toggle text-light"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-hJVHDwXWh3pscuJ8O1y8hiTqAnoGPgdHQ&s"
+                    class="rounded-circle img-fluid"
+                    style="width: 30px"
+                  />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light pb-4">
+                  <li>
+                    <a class="dropdown-item fs-6 fw-light border-bottom"
+                      >Sign in as user_name</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Your Profile</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Your Collections</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item border-bottom" href="#"
+                      >Your Bookmarks</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Help Center</a></li>
+                  <li>
+                    <a class="dropdown-item border-bottom" href="#"
+                      >Setting<span><i class="fa fa-cog ms-5"></i></span
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="nav nav-pills mb-3" id="tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active text-dark"
+                id="instruction-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#instruction"
+                type="button"
+                aria-controls="instruction"
+                aria-selected="true"
+              >
+                Instruction
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-dark"
+                id="code-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#code"
+                type="button"
+                aria-controls="code"
+                aria-selected="false"
+              >
+                Code
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-dark"
+                id="resources-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#resources"
+                type="button"
+                aria-controls="resources"
+                aria-selected="false"
+              >
+                Resources
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-dark"
+                id="solutions-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#solutions"
+                type="button"
+                aria-controls="solutions"
+                aria-selected="false"
+              >
+                Solutions
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-dark"
+                id="comments-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#comments"
+                type="button"
+                aria-controls="comments"
+                aria-selected="false"
+              >
+                Comments
+              </button>
+            </li>
+            <li class="nav-item dropdown ms-auto">
+              <button
+                class="btn"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-light">
+                <li><a class="dropdown-item" href="#">Add to Bookmarks</a></li>
+                <li>
+                  <a class="dropdown-item border-bottom" href="#"
+                    >Add to Collection</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">View analytics</a></li>
+                <li>
+                  <a class="dropdown-item fw-light" href="#">New translation</a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-bottom" href="#">Reset code</a>
+                </li>
+                <li><a class="dropdown-item fw-light" href="#">Edit</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="instruction"
+              role="tabpanel"
+              aria-labelledby="instruction-tab"
+            >
+              <div class="card bg-light px-3 py-3">
+                <h3>Convert Minutes into Seconds</h3>
+                <p>
+                  Publish by <a href="#"><b>bygyen</b></a> in<a
+                    href="#"
+                    class="dropdown-toggle"
+                  >
+                    <b>PHP</b></a
+                  >
+                </p>
+                <div class="mngbtn">
+                  <a class="btn btn-sm bg-li" role="botton" href="#"
+                    >complete</a
+                  >
+                  <a class="btn btn-sm bg-li" role="botton" href="#"
+                    >language-fundamentals</a
+                  >
+                  <a class="btn btn-sm bg-li" role="botton" href="#">math</a>
+                  <a class="btn btn-sm bg-li" role="botton" href="#">numbers</a>
+                  <i
+                    class="fa fa-plus ms-2 text-primary"
+                    role="botton"
+                    href="#"
+                  ></i>
+                </div>
+                <p class="my-3">
+                  Write a function that takes an integer
+                  <span class="border border-dark bg-li px-2">minutes</span> and
+                  converts it to seconds.
+                </p>
+                <p class="fw-bold fs-5">Examples</p>
+                <div class="exmp mt-3 bg-li solid">
+                  <p class="ms-3 pt-2">convert(5) ➞ 300</p>
+                  <p class="ms-3">convert(3) ➞ 180</p>
+                  <p class="ms-3 pb-2">convert(2) ➞ 120</p>
+                </div>
+                <p class="fw-bold fs-5 mt-3">Notes</p>
+                <ul class="list">
+                  <li>
+                    Don't forget to
+                    <span class="border border-dark bg-li px-2">return</span>
+                    the result.
+                  </li>
+                  <li>
+                    If you get stuck on a challenge, find help in the
+                    <b>Resources</b> tab.
+                  </li>
+                  <li>
+                    If you're really stuck, unlock solutions in the
+                    <b>Solutions</b> tab.
+                  </li>
+                </ul>
+              </div>
+              <div class="card mt-2 border-primary py-3 bg-bl">
+                <i class="fab fa-youtube text-danger ms-3 fs-3"
+                  ><span class="text-primary ms-3 fs-3 fw-bold">
+                    Watch a quick demo on how Edabit Work.</span
+                  ><span class="text-primary"
+                    ><a
+                      class="btn btn-sm btn-primary ms-3 fs-5"
+                      role="button"
+                      href="https://edabit-video.s3.amazonaws.com/demo.mp4"
+                      >Watch Demo</a
+                    ></span
+                  ></i
+                >
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="code"
+              role="tabpanel"
+              aria-labelledby="code-tab"
+            >
+              <div class="card bg-light px-4 pt-2 pb-5">
+                <code>
+                  function convert($minutes) {<br />
+                  <br />
+                  }
+                </code>
+              </div>
+              <div class="text-end mt-3">
+                <input
+                  type="submit"
+                  name="submit"
+                  value="Check"
+                  class="btn btn-li"
+                />
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="resources"
+              role="tabpanel"
+              aria-labelledby="resources-tab"
+            >
+              <div class="card bg-light px-4 pt-2 pb-5">
+                <div>
+                  <h5>
+                    <a href="#"
+                      >Conversion of Minutes into Seconds<span>
+                        <i class="fa fa-link text-dark fs-6"></i></span
+                    ></a>
+                  </h5>
+                  <p class="text-li">www.math-only-math.com</p>
+                  <p>
+                    We know 1 minute is equal to 60 seconds, which is required
+                    to convert the measuring time from minutes to seconds.
+                  </p>
+                  <p>
+                    11<span> <i class="fa fa-angle-up"></i></span>
+                    <span> <i class="fa fa-angle-down ms-5"></i></span>
+                  </p>
+                </div>
+                <div>
+                  <h5>
+                    <a href="#"
+                      >Minutes to Seconds Converter<span>
+                        <i class="fa fa-link text-dark fs-6"></i></span
+                    ></a>
+                  </h5>
+                  <p class="text-li">www.unitconverters.net</p>
+                  <p>
+                    Convert any number of minutes into the appropriate number of
+                    seconds.
+                  </p>
+                  <p>
+                    5<span> <i class="fa fa-angle-up"></i></span>
+                    <span> <i class="fa fa-angle-down ms-5"></i></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="solutions"
+              role="tabpanel"
+              aria-labelledby="solutions-tab"
+            >
+              <div class="card bg-light px-4 pb-5 pt-2">
+                <div>
+                  <h5 class="">
+                    Sort by
+                    <a href="#" class="dropdown-toggle"> most votes</a> within<a
+                      href="#"
+                      class="dropdown-toggle"
+                    >
+                      all user</a
+                    >
+                  </h5>
+                </div>
+                <div class="alert alet-light">
+                  <img
+                    class="img-fluid rounded-start"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-hJVHDwXWh3pscuJ8O1y8hiTqAnoGPgdHQ&s"
+                    style="width: 30px"
+                  /><a class="btn btn-sm bg-li" role="button" href="#"
+                    >Bailey Vogt</a
+                  ><a class="btn btn-sm bg-li" role="button" href="#">
+                    405 XP</a
+                  >
+                  <a class="btn btn-sm btn-primary" role="button" href="#"
+                    >Follow</a
+                  >
+                </div>
+                <div class="px-4 pb-5">
+                  <code>
+                    function convert($minutes) {<br />
+                    <span class="ms-3"> return $mintues * 60;</span><br />
+                    } </code
+                  ><br />
+                  <p class="mt-4">
+                    5<span> <i class="fa fa-angle-up"></i></span>
+                    <span> <i class="fa fa-angle-down ms-5"></i></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="comments"
+              role="tabpanel"
+              aria-labelledby="comments-tab"
+            >
+              <form>
+                <div class="card bg-light px-4 py-5">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea2"
+                    style="height: 100px"
+                  ></textarea>
+                </div>
+                <div class="text-end mt-3">
+                  <input
+                    type="submit"
+                    name="submit"
+                    value="Post Comment"
+                    class="btn btn-li"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 sd">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item ms-auto" role="presentation">
+              <button
+                class="nav-link text-dark"
+                id="test-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#test"
+                type="button"
+                role="tab"
+                aria-controls="test"
+                aria-selected="true"
+              >
+                Test
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-dark active"
+                id="console-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#console"
+                type="button"
+                role="tab"
+                aria-controls="console"
+                aria-selected="false"
+              >
+                Console
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade"
+              id="test"
+              role="tabpanel"
+              aria-labelledby="test-tab"
+            >
+              <div class="card bg-light px-4 pt-2 pb-5">
+                <code>
+                  class Seconds extends TestCase {<br />
+                  public function testConvert() {<br />
+                  $this->assertEquals(convert(6), 360);<br />
+                  $this->assertEquals(convert(4), 240);<br />
+                  $this->assertEquals(convert(8), 480);<br />
+                  $this->assertEquals(convert(60), 3600);<br />
+                  } }
+                </code>
+              </div>
+              <div class="we">
+                <i class="fa fa-flag text-danger mt-2">Flag</i>
+                <div class="text-end">
+                  <input
+                    type="submit"
+                    name="submit"
+                    value="Skip"
+                    class="btn btn-dark px-4 py-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade show active"
+              id="console"
+              role="tabpanel"
+              aria-labelledby="console-tab"
+            >
+              <div class="card bg-light px-4 pt-2 pb-5">
+                <div class="text-center">
+                  <img
+                    class="img-fluid"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqVlVpG4s4B_S63JAPfCbk5XrJygD8_q3aFQ&s"
+                  />
+                  <h5 class="ar">Pro Tip</h5>
+                  <p>Ctrl + Enter to check code.</p>
+                </div>
+              </div>
+              <div class="text-end my-3">
+                <input
+                  type="submit"
+                  name="submit"
+                  value="Skip"
+                  class="btn btn-dark px-4 py-2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="border-top mt-5">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid text-light">
+            <div class="nav nav-item dropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link fw-light" href="#">© 2021 Edabit. Inc</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Terms</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Roadmap</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Affiliates</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Help</a>
+                </li>
+                <li class="nav-item ms-8">
+                  <a class="nav-link text-primary" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </footer>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+      <script src="popper.min.js"></script>
+    </div>
+  </body>
+</html>
